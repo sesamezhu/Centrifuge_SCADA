@@ -1,0 +1,52 @@
+{
+    "switch": {
+        "interval_seconds": 10,
+        "sleep_seconds": 3,
+        "sub_count": 4,
+        "conn2": "DRIVER={SQL Server};SERVER=192.168.10.7;DATABASE=BG_ErLGSCADA;UID=sa;PWD=Anchor1234",
+        "conn": "DRIVER={SQL Server};SERVER=127.0.0.1;DATABASE=ErLG_SCADA;UID=sa;PWD=ak65147111",
+        "conn1": "DRIVER={SQL Server};SERVER=127.0.0.1;DATABASE=an_gang;UID=sa;PWD=sa"
+    },
+    "instruments": [
+        {
+            "id": 1,
+            "code": "E001",
+            "station_id": 1,
+            "group_id": 1,
+            "title": "0#",
+            "pressure_init": 5.0
+        },
+        {
+            "id": 2,
+            "code": "E002",
+            "station_id": 1,
+            "group_id": 1,
+            "title": "0#",
+            "pressure_init": 4.8
+        },
+        {
+            "id": 3,
+            "code": "E003",
+            "station_id": 2,
+            "group_id": 1,
+            "title": "0#",
+            "pressure_init": 4.6
+        }
+    ],
+  "groups": [
+      {
+          "id": 1,
+          "title": "连铸汽雾用气管网",
+          "pressure_max": 5.0,
+          "pressure_min": 4.2,
+          "pressure_step": 0.2
+      },
+      {
+          "id": 2,
+          "title": "一般用气管网",
+          "pressure_max": 8.0,
+          "pressure_min": 7.6,
+          "pressure_step": 0.2
+      }
+  ]
+}

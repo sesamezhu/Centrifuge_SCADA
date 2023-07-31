@@ -1,0 +1,89 @@
+{
+    "id": 1,
+    "title": "连铸汽雾用气管网",
+    "pressure_max": 5.0,
+    "pressure_min": 4.2,
+    "pressure_step": 0.2,
+    "adjust_no": 0,
+    "adjust_id": 0,
+    "sub_no": 0,
+    "pressure_time": 0.0,
+    "instruments": [
+        {
+            "id": 1,
+            "code": "E001",
+            "station_id": 1,
+            "group_id": 1,
+            "title": "0#",
+            "running": false,
+            "pressure_init": 5.0,
+            "pressure_todo": 0,
+            "specified": false,
+            "ignore": false,
+            "ignore_time": 0.0,
+            "real": {
+                "Q": "200.00",
+                "C": "97.00",
+                "discharge_open": "38.00"
+            },
+            "previous": {
+                "Q": 0,
+                "C": 100,
+                "discharge_open": 0
+            },
+            "rated_Q": "250",
+            "rated_A": 1000000
+        },
+        {
+            "id": 2,
+            "code": "E002",
+            "station_id": 1,
+            "group_id": 1,
+            "title": "0#",
+            "running": false,
+            "pressure_init": 4.8,
+            "pressure_todo": 0,
+            "specified": false,
+            "ignore": false,
+            "ignore_time": 0.0,
+            "real": {
+                "Q": "200.00",
+                "C": "97.00",
+                "discharge_open": "38.00"
+            },
+            "previous": {
+                "Q": 0,
+                "C": 100,
+                "discharge_open": 0
+            },
+            "rated_Q": "250",
+            "rated_A": 1000000
+        },
+        {
+            "id": 3,
+            "code": "E003",
+            "station_id": 2,
+            "group_id": 1,
+            "title": "0#",
+            "running": false,
+            "pressure_init": 4.6,
+            "pressure_todo": 0,
+            "specified": false,
+            "ignore": false,
+            "ignore_time": 0.0,
+            "real": {
+                "Q": "200.00",
+                "C": "97.00",
+                "discharge_open": "38.00"
+            },
+            "previous": {
+                "Q": 0,
+                "C": 100,
+                "discharge_open": 0
+            },
+            "rated_Q": "250",
+            "rated_A": 1000000
+        }
+    ],
+    "adjustments": []
+}

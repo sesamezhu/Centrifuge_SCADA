@@ -1,0 +1,41 @@
+{
+  "sqls": [
+    {
+      "id": "BB_Instrument_by_id",
+      "sql": [
+        "select * from [dbo].[BB_Instrument]",
+        "where id=?"
+      ]
+    },
+    {
+      "id": "Centrifuge_Real_latest",
+      "sql": [
+        "select top 1 * from  [dbo].[AP_Centrifuge_Real]",
+        "where EquipID=?",
+        "order by id desc"
+      ]
+    },
+    {
+      "id": "PressValue_Read_insert",
+      "sql": [
+        "INSERT INTO [dbo].[AP_PressValue_Read](",
+        "[Datetime],[StationID],[EquipID],[Run],[PressValue],[Specified])VALUES",
+        "(?,?,?,?,?,?)"
+      ]
+    },
+    {
+      "id": "Threshold_by_id",
+      "sql": [
+         "select * from [dbo].[BB_Instrument]",
+         "where id=?"
+      ]
+    },
+    {
+      "id": "PressConclusion_last",
+      "sql": [
+        "select top 1 * FROM [BG_ErLGSCADA].[dbo].[AP_PressDesign_Conclusion",
+        "order by id desc"
+      ]
+    }
+  ]
+}

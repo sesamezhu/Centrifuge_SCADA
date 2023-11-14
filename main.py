@@ -1,12 +1,8 @@
-import os
 import sys
-import time
 
-from time_log import time_log
-import win_config
 from anti_loose import AntiLoose
-from utils import py_common_utils
-from utils.config_sql_item import sql_executor
+from cv_tools import py_common_utils, win_config
+from cv_tools.time_log import time_log
 
 sys.path.append('entities')
 sys.path.append('utils')
@@ -18,7 +14,5 @@ if __name__ == '__main__':
     config = win_config.read_json()
     a = AntiLoose(config)
     while a.run():
-        time_log('AntiLoose running')
-    sql_executor.close()
-    py_common_utils.remove_dup_file()
+        time_log(f'AntiLoose run {a.loop_no} times')
     time_log('quiting main')

@@ -9,9 +9,9 @@ from entities.adjustment import Adjustment
 from entities.config_switch import ConfigSwitch
 from entities.group_entity import GroupEntity
 from entities.instrument_entity import InstrumentEntity, InstrumentReal
-from utils.py_common_utils import write_json, read_json, map_by_id
+from cv_tools.py_common_utils import read_json
 from utils.config_sql_item import sql_executor
-from time_log import time_log, time_err
+from cv_tools.time_log import time_log, time_err
 
 
 class AntiLoose:
@@ -21,6 +21,7 @@ class AntiLoose:
         self._instruments: typing.Dict[int, InstrumentEntity] = {}
         self._groups: typing.List[GroupEntity] = []
         self.init_groups()
+        self.loop_no = 0
 
     def run(self) -> bool:
         """
@@ -38,6 +39,7 @@ class AntiLoose:
                 biz.process()
             except:
                 traceback.print_exc()
+        self.loop_no += 1
         time.sleep(self._switch.sleep_seconds)
         return True
 
